@@ -25,6 +25,8 @@ const perguntas_populares=[
     {id:2, pergunta:'Quais são as cores primárias ? ', resposta:'VERMELHA,AZUL,AMARELO'},
     {id:3, pergunta:'Quantas horas tem um dia? ', resposta:24}
 ];
+
+
 console.log("\n ##    Quiz do Tarcisio  ##  \n");
 
 const Nome_Usuario = entradaDados.question('  Bem vindo jogador(a), qual o seu nome ?  ');
@@ -41,13 +43,32 @@ console.log(' 5 ) Fatos Populares');
 let escolha_assunto = entradaDados.question('\n  Qual tema voce quer testar seus conhecimentos ? ');
 escolha_assunto = parseInt(escolha_assunto);
 
-switch(escolha_assunto){
+switch(escolha_assunto){ 
     case 1:{
-        console.log(`\n Voçê escolheu * Português * \n\n Então vamos lá ${Nome_Usuario} !`)
+        console.log(`\n Voçê escolheu * Português * \n\n Então vamos lá ${Nome_Usuario} !`);
+        
+        function verificaResposta(perguntas_portugues){
+            let respostaUsuario = [];
+           
+            for(let i=0; i < 3; i++){
+                console.log(`${i + 1} - ${array[1].pergunta}`);
+                respostaUsuario =entradaDados.question("Resposta: ");
+        
+                if(Array[i].resposta == respostaUsuario){
+               console.log("parabens vc acertou");
+                }
+            
+                else{
+                console.log(`resposta errada`);
+               }
+        };
+        };
+    break
     }
+
     case 2:{
-        console.log(`  Voçê escolheu Fisíca \n\n Então vamos lá ${Nome_Usuario} !`)
-        break
+        console.log(`  Voçê escolheu Fisíca \n\n Então vamos lá ${Nome_Usuario} !`);
+        break;
     }
     case 3:{
         console.log(`  Voçê escolheu Química \n\n Então vamos lá ${Nome_Usuario} !`)
@@ -65,4 +86,4 @@ default:{
     console.log("escolha invalida");
     break
 }
-};
+}
